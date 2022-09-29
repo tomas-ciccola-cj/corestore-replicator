@@ -1,0 +1,16 @@
+{
+  "name": "corestore-replicator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "peer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "corestore": "^6.2.0",
+    "hyperswarm": "^4.3.5"
+  }
+}
