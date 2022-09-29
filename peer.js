@@ -5,7 +5,9 @@ const Corestore = require("corestore");
 const storePath = process.argv.slice(2)[0];
 // names of cores to create or open
 const coreNames = process.argv.slice(3);
+// hardcored topic
 const topic = Buffer.alloc(32).fill("my-topic");
+
 const swarm = new Hyperswarm();
 const store = new Corestore(storePath);
 
@@ -21,7 +23,7 @@ swarm.on("connection", (conn) => {
   });
 
   conn.on("data", (d) => {
-    console.log("data from peer!");
+    console.log("new key from peer!");
     console.log(d.toString("hex"));
     store.get({ key: d });
   });
